@@ -10,9 +10,9 @@ export default function Home() {
       <ScrollView>
         {/* 標題區 */}
         <View style={styles.header}>
-          <Text style={styles.emoji}>🚀</Text>
-          <Text style={styles.title}>我的第一個雲端 App</Text>
-          <Text style={styles.subtitle}>從 404 到成功部署的實錄</Text>
+          <Text style={styles.emoji}>🐧</Text>
+          <Text style={styles.title}>首頁</Text>
+          <Text style={styles.subtitle}>軟體學習</Text>
         </View>
 
         {/* 這裡要把原本的「查看原始碼」換成這個 Modal 按鈕 */}
@@ -20,14 +20,21 @@ export default function Home() {
           style={styles.modalBtn} 
           onPress={() => setModalVisible(true)}
         >
-          <Text style={styles.modalBtnText}>📍 按我 </Text>
+          <Text style={styles.modalBtnText}>按我</Text>
         </TouchableOpacity>
 
         <View style={styles.card}>
-          <Text style={styles.cardTitle}>📍 達成里程碑</Text>
-          <Text style={styles.bullet}>• 成功建立 Expo 路由結構</Text>
-          <Text style={styles.bullet}>• 克服 Git 分支衝突</Text>
-          <Text style={styles.bullet}>• Vercel 自動部署成功</Text>
+          <Text style={styles.cardTitle}>📍 達成成果</Text>
+          <Text style={styles.bullet}>• Expo 專案        npx create-expo-app@latest txst-02</Text>
+          <Text style={styles.bullet}>• 啟動預覽         npx expo start</Text>
+          <Text style={styles.bullet}>_____________________________________________________________________</Text>
+          <Text style={styles.bullet}>•首次連結 GitHub</Text>
+          <Text style={styles.bullet}>•推送到 GitHub   git add . git commit -m git push origin main</Text>
+          <Text style={styles.bullet}>_____________________________________________________________________</Text>
+          <Text style={styles.bullet}>•Vercel 自動化</Text>
+          <Text style={styles.bullet}>_____________________________________________________________________</Text>
+          <Text style={styles.bullet}>⭐完成⭐</Text>
+          
         </View>
       </ScrollView>
 
@@ -40,13 +47,13 @@ export default function Home() {
       >
         <View style={styles.centeredView}>
           <View style={styles.modalView}>
-            <Text style={styles.modalText}>這就是 Modal 視窗！🎉</Text>
+            <Text style={styles.modalText}>Modal 視窗！他會飛起來！</Text>
             <Text style={styles.modalSubText}>
-              當初看到 404 的時候超難過，{"\n"}
-              沒想到推送到 main 分支後就成功了！
+              屋呼{"\n"}
+              起飛
             </Text>
             <Pressable style={styles.closeBtn} onPress={() => setModalVisible(false)}>
-              <Text style={styles.closeBtnText}>關閉故事</Text>
+              <Text style={styles.closeBtnText}>關閉起飛</Text>
             </Pressable>
           </View>
         </View>
@@ -62,10 +69,10 @@ const styles = StyleSheet.create({
   title: { fontSize: 24, fontWeight: 'bold', marginTop: 10 },
   subtitle: { color: '#666' },
   card: { backgroundColor: '#fff', margin: 20, padding: 20, borderRadius: 15 },
-  cardTitle: { fontSize: 18, fontWeight: 'bold', color: '#8c00ffff', marginBottom: 10 },
+  cardTitle: { fontSize: 18, fontWeight: 'bold', color: '#323242ff', marginBottom: 10 },
   bullet: { fontSize: 16, marginBottom: 5 },
   // 按鈕樣式
-  modalBtn: { backgroundColor: '#8400ffff', margin: 20, padding: 15, borderRadius: 10, alignItems: 'center' },
+  modalBtn: { backgroundColor: '#8886aaff', margin: 20, padding: 15, borderRadius: 10, alignItems: 'center' },
   modalBtnText: { color: '#fff', fontSize: 16, fontWeight: 'bold' },
   // Modal 樣式
   centeredView: { flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'rgba(0,0,0,0.5)' },

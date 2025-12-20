@@ -23,8 +23,9 @@ export default function Page() {
       <MyModal 
         visible={show} 
         onClose={() => setShow(false)} 
-        title="小英的紀錄" 
-        content="這裡可以寫下關於這個頁面的專屬故事喔！" 
+        
+        title="聽說" 
+        content="有人鬧鐘沒關" 
       />
     </View>
   );
@@ -37,12 +38,18 @@ const styles = StyleSheet.create({
     alignItems: 'center', 
     backgroundColor: '#f5f5f5' 
   },
-  text: { fontSize: 20, color: '#333', marginBottom: 20 },
+  text: { fontSize: 20, color: '#2f0f86ff', marginBottom: 20 },
   button: {
-    backgroundColor: '#007AFF',
+    backgroundColor: '#007AFF', // 這是背景顏色
     paddingHorizontal: 20,
     paddingVertical: 12,
     borderRadius: 10,
   },
-  buttonText: { color: '#white', fontWeight: 'bold', fontSize: 16 }
+  buttonText: {
+    color: '#FFFFFF',          // 1. 這裡就是改文字顏色的地方（白色）
+    fontSize: 16,               // 2. 也可以順便改大小
+    fontWeight: 'bold',         // 3. 讓文字變粗更好看
+    textAlign: 'center',        // 4. 確保文字在按鈕內居中
+  }
+  
 });

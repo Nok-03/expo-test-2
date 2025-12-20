@@ -23,4 +23,5 @@ const styles = StyleSheet.create({
   content: { fontSize: 16, color: '#444', marginBottom: 20 },
   btn: { backgroundColor: '#e47ff1ffff', padding: 10, borderRadius: 10, alignItems: 'center' },
   btnText: { color: 'white', fontWeight: 'bold' }
+  
 });
