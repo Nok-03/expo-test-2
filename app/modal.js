@@ -1,29 +1,25 @@
-import { Link } from 'expo-router';
-import { StyleSheet } from 'react-native';
+import { Modal, View, Text, Button } from 'react-native';
+import { useState } from 'react';
 
-import { ThemedText } from '@/components/themed-text';
-import { ThemedView } from '@/components/themed-view';
+export default function MyModal() {
+  const [visible, setVisible] = useState(false); // 控制顯示或隱藏
 
-export default function ModalScreen() {
   return (
-    <ThemedView style={styles.container}>
-      <ThemedText type="title">This is a modal</ThemedText>
-      <Link href="/" dismissTo style={styles.link}>
-        <ThemedText type="link">Go to home screen</ThemedText>
-      </Link>
-    </ThemedView>
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Button title="點我打開秘密" onPress={() => setVisible(true)} />
+
+      <Modal
+        animationType="fade" // 彈出來的方式：slide(滑動), fade(淡入), none
+        transparent={true}    // 背景是否透明
+        visible={visible}     // 是否顯示
+      >
+        <View style={{ flex: 1, backgroundColor: 'rgba(0,0,0,0.5)', justifyContent: 'center', alignItems: 'center' }}>
+          <View style={{ backgroundColor: 'white', padding: 20, borderRadius: 10 }}>
+            <Text>這就是 Modal！成功部署的感覺真棒！</Text>
+            <Button title="關閉" onPress={() => setVisible(false)} />
+          </View>
+        </View>
+      </Modal>
+    </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: 20,
-  },
-  link: {
-    marginTop: 15,
-    paddingVertical: 15,
-  },
-});
