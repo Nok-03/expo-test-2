@@ -1,6 +1,6 @@
 // app/(tabs)/index.js
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Modal, Pressable } from 'react-native';
+import { Modal, Pressable, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 export default function Home() {
   const [modalVisible, setModalVisible] = useState(false);
@@ -20,7 +20,7 @@ export default function Home() {
           style={styles.modalBtn} 
           onPress={() => setModalVisible(true)}
         >
-          <Text style={styles.modalBtnText}>📍 點擊查看開發秘辛</Text>
+          <Text style={styles.modalBtnText}>📍 按我 </Text>
         </TouchableOpacity>
 
         <View style={styles.card}>
@@ -62,16 +62,16 @@ const styles = StyleSheet.create({
   title: { fontSize: 24, fontWeight: 'bold', marginTop: 10 },
   subtitle: { color: '#666' },
   card: { backgroundColor: '#fff', margin: 20, padding: 20, borderRadius: 15 },
-  cardTitle: { fontSize: 18, fontWeight: 'bold', color: '#007AFF', marginBottom: 10 },
+  cardTitle: { fontSize: 18, fontWeight: 'bold', color: '#8c00ffff', marginBottom: 10 },
   bullet: { fontSize: 16, marginBottom: 5 },
   // 按鈕樣式
-  modalBtn: { backgroundColor: '#007AFF', margin: 20, padding: 15, borderRadius: 10, alignItems: 'center' },
+  modalBtn: { backgroundColor: '#8400ffff', margin: 20, padding: 15, borderRadius: 10, alignItems: 'center' },
   modalBtnText: { color: '#fff', fontSize: 16, fontWeight: 'bold' },
   // Modal 樣式
   centeredView: { flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'rgba(0,0,0,0.5)' },
   modalView: { backgroundColor: 'white', padding: 30, borderRadius: 20, width: '80%', alignItems: 'center' },
   modalText: { fontSize: 20, fontWeight: 'bold', marginBottom: 10 },
   modalSubText: { textAlign: 'center', color: '#444', marginBottom: 20 },
-  closeBtn: { backgroundColor: '#2196F3', padding: 10, borderRadius: 10, width: 100, alignItems: 'center' },
+  closeBtn: { backgroundColor: '#a871dbff', padding: 10, borderRadius: 10, width: 100, alignItems: 'center' },
   closeBtnText: { color: 'white', fontWeight: 'bold' }
 });

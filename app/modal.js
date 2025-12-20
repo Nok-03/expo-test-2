@@ -9,7 +9,7 @@ export default function MyModal() {
       <Button title="點我打開秘密" onPress={() => setVisible(true)} />
 
       <Modal
-        animationType="slide" // 彈出來的方式：slide(滑動), fade(淡入), none
+        animationType="fade" // 彈出來的方式：slide(滑動), fade(淡入), none
         transparent={true}    // 背景是否透明
         visible={visible}     // 是否顯示
       >
